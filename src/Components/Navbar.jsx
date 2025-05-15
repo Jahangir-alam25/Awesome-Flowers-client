@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { IoIosCloseCircleOutline, IoMdMenu } from "react-icons/io";
+import { Link } from 'react-router';
 const user = {
     name: "John Doe",
     email: "Y0vHl@example.com",
@@ -37,7 +38,7 @@ const Navbar = () => {
                 <div className='sm:flex items-center gap-2 hidden'>
 
                     <img className='w-10 rounded-2xl h-10' src={user.image ? user.image : "https://i.ibb.co/bRYjqzXg/pexels-pixabay-56866.jpg"} alt="profile" />
-                    <button className='bg-blue-500 text-white px-4 py-2 rounded'>Login</button>
+                    <Link to="/auth/login" className='bg-blue-500 text-white px-10 py-2 rounded'>Login</Link>
                 </div>
                 <button onClick={handleMenuClick} className='sm:hidden'>{isOpen ? <IoIosCloseCircleOutline size={30} /> : <IoMdMenu size={30} />} </button>
             </div>
