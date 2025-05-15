@@ -44,18 +44,18 @@ const Navbar = () => {
             {isOpen && (
                 <div className='flex flex-col gap-2 bg-gray-100  p-4'>
                     <div className='flex justify-between gap-2 p-4'>
-                       <div className='flex flex-col gap-2'>
-                         {links.map((link, index) => (
-                            <a key={index} href={link.path} className='text-xl font-semibold'>
-                                {link.name}
-                            </a>
-                        ))}
-                       </div>
+                        <div className='flex flex-col gap-2'>
+                            {links.map((link, index) => (
+                                <a key={index} href={link.path} className='text-xl font-semibold'>
+                                    {link.name}
+                                </a>
+                            ))}
+                        </div>
                         <img className='w-10 rounded-2xl h-10' src={user.image ? user.image : "https://i.ibb.co/bRYjqzXg/pexels-pixabay-56866.jpg"} alt="profile" />
-                       
+
                     </div>
-                    
- <button className='bg-blue-500 btn btn-block text-white px-4 py-2 rounded'>Login</button>
+
+                    <button className='bg-blue-500 btn btn-block text-white px-4 py-2 rounded'>Login</button>
                 </div>
             )}
         </nav>
